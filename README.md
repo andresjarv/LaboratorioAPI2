@@ -43,3 +43,12 @@ Se implementó un patrón de repositorio en la carpeta `app/crud/` para desacopl
 * **Abstracción:** Los archivos `personal.py` y `formacion.py` contienen funciones puras de SQLAlchemy que reciben una sesión de base de datos (`Session`) y los datos validados por Pydantic.
 * **Actualizaciones Parciales:** Se utiliza la funcionalidad de Pydantic para permitir actualizaciones de campos específicos sin requerir el objeto completo, optimizando las peticiones PATCH/PUT.
 * **Gestión de Sesiones:** Se asegura el uso de `db.refresh()` tras cada inserción para devolver al cliente el objeto final con los IDs generados por PostgreSQL.
+
+## 6. Ejecución y Documentación
+La API implementa documentación automática mediante Swagger UI.
+
+### Pasos para ejecutar:
+1. Asegúrese de tener el entorno virtual activo.
+2. Ejecute el servidor con Uvicorn:
+   ```bash
+   uvicorn app.main:app --reload
