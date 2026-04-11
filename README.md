@@ -2,8 +2,8 @@
 
 ## 1. Información General
 * **Integrantes:** Diego Alejandro Giraldo Bolivar
-                   Julian David Velez Arango
-                   Jorge Andres Vidal Ramirez 
+*                  Julian David Velez Arango
+*                  Jorge Andres Vidal Ramirez 
 * **Asignatura:** Aplicaciones y Servicios Web
 * **Fecha:** Abril 2026
 
