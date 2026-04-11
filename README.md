@@ -1,7 +1,9 @@
 # Taller 2: Gestión de Personal y Formación - ITM
 
 ## 1. Información General
-* **Integrantes:** [Tu Nombre y los de tu equipo]
+* **Integrantes:** Diego Alejandro Giraldo Bolivar
+                   Julian David Velez Arango
+                   Jorge Andres Vidal Ramirez 
 * **Asignatura:** Aplicaciones y Servicios Web
 * **Fecha:** Abril 2026
 
