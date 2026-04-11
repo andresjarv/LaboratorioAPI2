@@ -29,3 +29,10 @@ Representa la información básica de los integrantes.
 Registra la trayectoria académica de cada persona.
 * *Relación:* Llave foránea id_personal vinculada a la tabla personal.
 * *Integridad:* Se configuró eliminación en cascada para evitar registros huérfanos.
+
+## 4. Validación de Datos (Schemas)
+Se utiliza *Pydantic* para la validación y serialización de datos:
+
+* *Contratos de Entrada:* Se definen esquemas Create y Update para restringir qué campos puede enviar el cliente (por ejemplo, el cliente no puede definir el id manualmente).
+* *Contratos de Salida:* Los esquemas de respuesta formatean los objetos de base de datos a JSON, incluyendo relaciones anidadas (un objeto Personal incluye su lista de formaciones).
+* *Tipado Fuerte:* Uso de EmailStr para garantizar la integridad de los correos electrónicos desde el nivel de aplicación.
