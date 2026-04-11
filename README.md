@@ -2,9 +2,9 @@
 
 ## 1. Información General
 * **Integrantes:** 
-                   > - Diego Alejandro Giraldo Bolivar*
-                   > - Julian David Velez Arango*
-                   > - Jorge Andres Vidal Ramirez*
+    > - Diego Alejandro Giraldo Bolivar
+    > - Julian David Velez Arango
+    > - Jorge Andres Vidal Ramirez
                    
 * **Asignatura:** Aplicaciones y Servicios Web
 * **Fecha:** Abril 2026
@@ -36,3 +36,10 @@ Se utiliza *Pydantic* para la validación y serialización de datos:
 * *Contratos de Entrada:* Se definen esquemas Create y Update para restringir qué campos puede enviar el cliente (por ejemplo, el cliente no puede definir el id manualmente).
 * *Contratos de Salida:* Los esquemas de respuesta formatean los objetos de base de datos a JSON, incluyendo relaciones anidadas (un objeto Personal incluye su lista de formaciones).
 * *Tipado Fuerte:* Uso de EmailStr para garantizar la integridad de los correos electrónicos desde el nivel de aplicación.
+
+## 5. Lógica de Persistencia (CRUD)
+Se implementó un patrón de repositorio en la carpeta `app/crud/` para desacoplar la base de datos de los endpoints:
+
+* **Abstracción:** Los archivos `personal.py` y `formacion.py` contienen funciones puras de SQLAlchemy que reciben una sesión de base de datos (`Session`) y los datos validados por Pydantic.
+* **Actualizaciones Parciales:** Se utiliza la funcionalidad de Pydantic para permitir actualizaciones de campos específicos sin requerir el objeto completo, optimizando las peticiones PATCH/PUT.
+* **Gestión de Sesiones:** Se asegura el uso de `db.refresh()` tras cada inserción para devolver al cliente el objeto final con los IDs generados por PostgreSQL.
