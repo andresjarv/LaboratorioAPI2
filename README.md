@@ -52,3 +52,12 @@ La API implementa documentación automática mediante Swagger UI.
 2. Ejecute el servidor con Uvicorn:
    ```bash
    uvicorn app.main:app --reload
+
+### Pruebas Finales:
+* Post Persona
+
+![Post Persona](image.png)
+
+* Post Formacion
+
+![Post Formacion](image-1.png)
