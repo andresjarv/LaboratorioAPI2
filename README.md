@@ -61,3 +61,19 @@ La API implementa documentación automática mediante Swagger UI.
 * Post Formacion
 
 ![Post Formacion](image-1.png)
+
+##  Conclusiones
+ 
+### Aprendizajes
+- Estructurar un proyecto por capas (models, schemas, crud, api, db) hace el código más ordenado y fácil de mantener.
+- SQLAlchemy simplifica mucho el trabajo con la base de datos al evitar escribir SQL directamente.
+- La inyección de dependencias con `Depends(get_db)` es la forma correcta de manejar sesiones sin dejar conexiones abiertas.
+- Trabajar con Git en equipo nos obligó a organizarnos y respetar el trabajo de cada uno.
+ 
+### Dificultades
+- Configurar el schema de PostgreSQL correctamente en el engine y los modelos nos tomó más tiempo del esperado.
+- Al inicio dejábamos sesiones de base de datos abiertas hasta implementar bien el `try/finally` en `get_db()`.
+ 
+### Soluciones
+- Consultamos la documentación oficial de SQLAlchemy para configurar el `search_path` correctamente.
+- Nos apoyamos en el repositorio del docente para estructurar bien los routers y schemas.
